@@ -2,18 +2,27 @@
     --primary-color: #F7F7F7;
     --secondary-color: #EDD65A;
     --border-color: #111;
+    --third-color: #F36DF7;
+}
+
+* {
+    box-sizing: border-box;
 }
 
 
 body {
     margin: 0;
     padding: 0;
-    box-sizing: border-box;
     background: var(--primary-color);
 }
 
-/* ---------------------------- */
 
+main img {
+    width: 10px;
+    height: 10px;
+}
+
+/* ---------------------------- Navigation ---------------------------- */
 nav, .nav-right {
     display: flex;
     align-items: center;
@@ -24,7 +33,6 @@ nav {
 }
 
 /* ---------------------------- */
-
 .nav-left {
     border: 1px solid var(--border-color);
     border-radius: 20px;
@@ -46,7 +54,6 @@ nav {
 }
 
 /* ---------------------------- */
-
 .nav-right {
     gap: 10px;
     font-weight: bold;
@@ -61,4 +68,99 @@ nav {
 
 .nav-right > p, img {
     cursor: pointer;
+}
+
+
+/* ---------------------------- main ---------------------------- */
+.container {
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    border: 1px solid var(--border-color);
+    border-radius: 10px;
+    max-width: 600px;
+    }
+
+/* ---------------------------- */
+
+.container-top {
+    border-bottom: 1px solid var(--border-color);
+    width: 100%;
+    padding: 15px;
+}
+
+.container-top > select {
+    border-radius: 10px;
+    border: 1px solid var(--border-color);
+    padding: 3px;
+}
+
+.container-top > button {
+    background: var(--primary-color);
+    border: 1px solid var(--border-color);
+    border-radius: 10px;
+    padding: 3px;
+} 
+
+/* ---------------------------- */
+
+.container-center {
+    width: 100%;
+}
+/* ---------------------------- */
+
+.container-center-top {
+    margin: 10px 0;
+    border: 1px solid var(--border-color);
+    border-radius: 10px;
+    width: 95%;
+    background: var(--third-color);
+}   
+
+.container-center-top > p, .container-bottom > p { 
+    font-size: 10px;
+}
+
+.container-center-top > p:first-child {
+    background: var(--primary-color);
+    border: 1px solid var(--border-color);
+    border-radius: 10px;
+    padding: 3px 6px;
+    width: fit-content;
+}
+/* ---------------------------- */
+
+.container-center-bottom > button{
+    border: 1px solid var(--border-color);
+    padding: 5px;
+    border-radius: 15px;
+    box-shadow: 1px 1px 1px 1px var(--border-color);
+}
+
+.container-center-bottom > button:first-child{
+    background: var(--secondary-color);
+}
+
+.container-center-bottom > button:last-child {
+    background: var(--primary-color);   
+}
+
+.container-center-bottom {
+    border-bottom: 1px solid var(--border-color);
+    padding-bottom: 10px;
+}
+/* ---------------------------- */
+
+.container-bottom {
+    display: flex;
+    justify-content: space-around;
+    width: 100%;
+    padding: 10px 0;
+}
+
+.container-bottom > button {
+    padding: 0 10px;
+    border: 1px solid var(--border-color);
+    border-radius: 15px;
+    background: var(--primary-color);
 }
