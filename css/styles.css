@@ -78,9 +78,16 @@ nav {
     flex-direction: column;
     border: 1px solid var(--border-color);
     border-radius: 10px;
-    max-width: 600px;
+    max-width: 700px;
+    margin-left: auto;
+    margin-right: auto;
     }
 
+
+.container-top {
+    display: flex;
+    justify-content: space-between;
+}
 /* ---------------------------- */
 
 .container-top {
@@ -89,29 +96,44 @@ nav {
     padding: 15px;
 }
 
-.container-top > select {
+.container-top > div > select {
     border-radius: 10px;
     border: 1px solid var(--border-color);
-    padding: 3px;
+    padding: 5px;
 }
 
 .container-top > button {
     background: var(--primary-color);
     border: 1px solid var(--border-color);
     border-radius: 10px;
-    padding: 3px;
+    padding: 3px 6px;
 } 
 
 /* ---------------------------- */
 
 .container-center {
     width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
 }
+
+.container-center-top {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.container-center-top > p:nth-child(3) {
+    margin: -12px 10px 30px 10px;
+
+}
+
 /* ---------------------------- */
 
 .container-center-top {
     margin: 10px 0;
-    border: 1px solid var(--border-color);
+    border: 2px solid var(--border-color);
     border-radius: 10px;
     width: 95%;
     background: var(--third-color);
@@ -127,6 +149,7 @@ nav {
     border-radius: 10px;
     padding: 3px 6px;
     width: fit-content;
+    margin-bottom: 20px;
 }
 /* ---------------------------- */
 
@@ -148,6 +171,10 @@ nav {
 .container-center-bottom {
     border-bottom: 1px solid var(--border-color);
     padding-bottom: 10px;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    gap: 10px;
 }
 /* ---------------------------- */
 
