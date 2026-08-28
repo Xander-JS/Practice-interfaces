@@ -60,6 +60,7 @@ nav {
 .nav-right {
     gap: 10px;
     font-weight: bold;
+    flex-shrink: 0;
 }
 
 .nav-right > img {
@@ -71,6 +72,8 @@ nav {
 
 .nav-right > p, img {
     cursor: pointer;
+    flex-shrink: 0;
+    
 }
 
 
