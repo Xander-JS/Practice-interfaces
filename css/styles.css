@@ -1,0 +1,51 @@
+:root {
+    --primary-color: #F7F7F7;
+    --secondary-color: #EDD65A;
+    --border-color: #111;
+}
+
+
+body {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    background: var(--primary-color);
+}
+
+/* ---------------------------- */
+
+nav, .nav-right {
+    display: flex;
+}
+
+nav {
+    justify-content: space-around;
+}
+
+/* ---------------------------- */
+.nav-left {
+    border: 1px solid var(--border-color);
+    border-radius: 20px;
+    padding: 2px;
+    margin: 10px;
+    gap: 10px;
+}
+
+.nav-left > button {
+    background: var(--primary-color);
+    border: none;
+    border-radius: 20px;
+    padding: 7px;
+}
+
+.nav-left > button:hover {
+    background: var(--secondary-color);
+    cursor: pointer;
+}
+
+/* ---------------------------- */
+
+.nav-right {
+    gap: 10px;
+    font-weight: bold;
+}
