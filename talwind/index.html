@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -8,8 +9,125 @@
 
 </head>
 <body>
-    <h1 class="text-3xl font-bold underline">
-    Hello world!
-    </h1>
+    <header>
+        <!-- Barra de navegación -->
+        <nav class="nav">
+            <!-- Nota: Cambié nav-right por nav-brand para ser descriptivo según su función, no su posición visual -->
+            <div class="nav-brand">
+                <img src="../public/ip-address.png" alt="Flashcard App Logo">
+                <h1>Flashcard</h1>
+            </div>
+
+            <div class="nav-controls">
+                <button>Study Mode</button>
+                <button>All Cards</button>
+            </div>
+        </nav>
+    </header>
+
+    <!-- Contenido principal -->
+    <div class="container-grid">
+        <main>
+            <div class="container">
+                <!-- Controles superiores de la tarjeta -->
+                <div class="container-top">
+                    <div>
+                        <select name="category" aria-label="Filter by category">
+                            <option value="">All Categories</option>
+                        </select>
+                        <label>
+                            <input type="checkbox" name="hide-mastered">
+                            Hide Mastered
+                        </label>
+                    </div>
+                    <button>
+                        <!-- alt vacío porque el botón ya tiene el texto "Shuffle" -->
+                        <img src="../public/icons/shuffle.svg" alt="" aria-hidden="true">
+                        Shuffle
+                    </button>
+                </div>
+
+                <!-- Tarjeta central -->
+                <div class="container-center">
+                    <div class="container-center-top">
+                        <span class="category-badge">Web Development</span>
+                        <h2>What does HTML stand for?</h2>
+                        <p class="hint-text">Click to reveal answer</p>
+                        <p class="progress-text">0/5</p>
+                    </div>
+                    <div class="container-center-bottom">
+                        <button>
+                            <img src="../public/icons/check.svg" alt="" aria-hidden="true">
+                            I know This
+                        </button>
+                        <button>
+                            <img src="../public/icons/reset.svg" alt="" aria-hidden="true">
+                            Reset Progress
+                        </button>
+                    </div>
+                </div>
+
+                <!-- Controles inferiores -->
+                <div class="container-bottom">
+                    <button>
+                        <img src="../public/icons/arrow-left.svg" alt="" aria-hidden="true">
+                        Previous
+                    </button>
+                    <p>Card 1 of 40</p>
+                    <button>
+                        Next
+                        <img src="../public/icons/arrow-right.svg" alt="" aria-hidden="true">
+                    </button>
+                </div>
+            </div>
+        </main>
+
+        <!-- Sección secundaria (Estadísticas) -->
+        <aside>
+            <div class="aside-content">
+                <h3>Study Statistics</h3>
+
+                <div class="aside-item">
+                    <div>
+                        <p>Total Cards</p>
+                        <p class="stat-number">40</p>
+                    </div>
+                    <div class="aside-item-img aside-item-img-1">
+                        <img src="../public/icons/book.png" alt="" aria-hidden="true">
+                    </div>
+                </div>
+
+                <div class="aside-item">
+                    <div>
+                        <p>Mastered</p>
+                        <p class="stat-number">11</p>
+                    </div>
+                    <div class="aside-item-img aside-item-img-2">
+                        <img src="../public/icons/brain.png" alt="" aria-hidden="true">
+                    </div>
+                </div>
+
+                <div class="aside-item">
+                    <div>
+                        <p>In Progress</p>
+                        <p class="stat-number">21</p>
+                    </div>
+                    <div class="aside-item-img aside-item-img-3">
+                        <img src="../public/icons/open-book.png" alt="" aria-hidden="true">
+                    </div>
+                </div>
+
+                <div class="aside-item">
+                    <div>
+                        <p>Not Started</p>
+                        <p class="stat-number">8</p>
+                    </div>
+                    <div class="aside-item-img aside-item-img-4">
+                        <img src="../public/icons/inbox.png" alt="" aria-hidden="true">
+                    </div>
+                </div>
+            </div>
+        </aside>
+    </div>
 </body>
 </html>
