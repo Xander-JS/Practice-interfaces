@@ -227,7 +227,8 @@ nav {
     display: flex;
     justify-content: space-between;
     border: 1px solid var(--border-color);
-    border-radius: 10px;    
+    border-radius: 10px;   
+    overflow: hidden; 
 }
 
 .aside-item > div > p {
@@ -244,4 +245,29 @@ nav {
 .aside img {
     width: 30px;
     height: 30px;    
+    mix-blend-mode: multiply;       
+}
+
+.aside-item-img {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 100px;
+    border-left: 1px solid var(--border-color);
+}
+
+.aside-item-img-1 {
+    background: #93acec;
+}
+
+.aside-item-img-2 {
+    background: #47daca;
+}
+
+.aside-item-img-3 {
+    background: #f173a3;
+}
+
+.aside-item-img-4 {
+    background: #f173a3;
 }
