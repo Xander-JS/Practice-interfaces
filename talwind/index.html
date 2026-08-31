@@ -5,129 +5,132 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
-    <link href="/src/style.css" rel="stylesheet">
+    <script src="https://cdn.tailwindcss.com"></script>     
 
 </head>
-<body>
-    <header>
-        <!-- Barra de navegación -->
-        <nav class="nav">
-            <!-- Nota: Cambié nav-right por nav-brand para ser descriptivo según su función, no su posición visual -->
-            <div class="nav-brand">
-                <img src="../public/ip-address.png" alt="Flashcard App Logo">
-                <h1>Flashcard</h1>
-            </div>
-
-            <div class="nav-controls">
-                <button>Study Mode</button>
-                <button>All Cards</button>
-            </div>
-        </nav>
-    </header>
-
-    <!-- Contenido principal -->
-    <div class="container-grid">
-        <main>
-            <div class="container">
-                <!-- Controles superiores de la tarjeta -->
-                <div class="container-top">
-                    <div>
-                        <select name="category" aria-label="Filter by category">
-                            <option value="">All Categories</option>
-                        </select>
-                        <label>
-                            <input type="checkbox" name="hide-mastered">
-                            Hide Mastered
-                        </label>
-                    </div>
-                    <button>
-                        <!-- alt vacío porque el botón ya tiene el texto "Shuffle" -->
-                        <img src="../public/icons/shuffle.svg" alt="" aria-hidden="true">
-                        Shuffle
-                    </button>
+<body class="bg-neutral-100 flex justify-center">
+    <div class="w-[90%]">
+        <header>
+            <!-- Barra de navegación -->
+            <nav class="nav flex justify-between items-center mt-4 mb-4">
+                <!-- Nota: Cambié nav-right por nav-brand para ser descriptivo según su función, no su posición visual -->
+                <div class="nav-brand flex justify-center items-center gap-2">
+                    <img src="../public/ip-address.png" alt="Flashcard App Logo" class="border border-neutral-900 rounded-3xl ">
+                    <h1 class="font-black">Flashcard</h1>
                 </div>
-
-                <!-- Tarjeta central -->
-                <div class="container-center">
-                    <div class="container-center-top">
-                        <span class="category-badge">Web Development</span>
-                        <h2>What does HTML stand for?</h2>
-                        <p class="hint-text">Click to reveal answer</p>
-                        <p class="progress-text">0/5</p>
-                    </div>
-                    <div class="container-center-bottom">
-                        <button>
-                            <img src="../public/icons/check.svg" alt="" aria-hidden="true">
-                            I know This
-                        </button>
-                        <button>
-                            <img src="../public/icons/reset.svg" alt="" aria-hidden="true">
-                            Reset Progress
+    
+                <div class="nav-controls border border-neutral-900 rounded-3xl p-1">
+                    <button class=" border border-neutral-900 rounded-3xl bg-amber-300 py-1 px-3 font-medium">Study Mode</button>
+                    <button class="rounded-3xl py-1 px-3">All Cards</button>
+                </div>
+            </nav>
+        </header>
+    
+        <!-- Contenido principal -->
+        <div class="container-grid">
+            <main class="border border-neutral-900 rounded-2xl">
+                <div class="container">
+                    <!-- Controles superiores de la tarjeta -->
+                    <div class="container-top flex justify-between items-center border-b border-neutral-900 pb-4 pt-4">
+                        <div class="flex gap-4 items-center ml-4">
+                            <select name="category" aria-label="Filter by category" class="bg-transparent border border-neutral-900 rounded-3xl p-2 outline-none">
+                                <option value="">All Categories</option>
+                            </select>
+                            <label>
+                                <input type="checkbox" name="hide-mastered">
+                                Hide Mastered
+                            </label>
+                        </div>
+                        <button class="border border-neutral-900 rounded-3xl py-2 px-4 mr-4" >
+                            <!-- alt vacío porque el botón ya tiene el texto "Shuffle" -->
+                            <img src="../public/icons/shuffle.svg" alt="" aria-hidden="true">
+                            Shuffle
                         </button>
                     </div>
-                </div>
-
-                <!-- Controles inferiores -->
-                <div class="container-bottom">
-                    <button>
-                        <img src="../public/icons/arrow-left.svg" alt="" aria-hidden="true">
-                        Previous
-                    </button>
-                    <p>Card 1 of 40</p>
-                    <button>
-                        Next
-                        <img src="../public/icons/arrow-right.svg" alt="" aria-hidden="true">
-                    </button>
-                </div>
-            </div>
-        </main>
-
-        <!-- Sección secundaria (Estadísticas) -->
-        <aside>
-            <div class="aside-content">
-                <h3>Study Statistics</h3>
-
-                <div class="aside-item">
-                    <div>
-                        <p>Total Cards</p>
-                        <p class="stat-number">40</p>
+    
+                    <!-- Tarjeta central -->
+                    <div class="container-center">
+                        <div class=" flex flex-col justify-center items-center container-center-top bg-fuchsia-400 m-4  border-4 border-neutral-900 rounded-2xl p-4 gap-4">
+                            <span class="category-badge bg-neutral-100 rounded-3xl py-1 px-4 mb-10">Web Development</span>
+                            <h2 class="font-black text-4xl">What does HTML stand for?</h2>
+                            <p class="hint-text text-gray-800">Click to reveal answer</p>
+                            <p class="progress-text text-gray-800 mt-10">0/5</p>
+                        </div>
+                        <div class="container-center-bottom border-b border-neutral-900 flex justify-center items-center gap-2">
+                            <button class="border border-neutral-900 rounded-3xl px-4 py-1 mb-4 bg-amber-300">
+                                <img src="../public/icons/check.svg" alt="" aria-hidden="true">
+                                I know This
+                            </button>
+                            <button class="border border-neutral-900 rounded-3xl px-4 py-1 mb-4">
+                                <img src="../public/icons/reset.svg" alt="" aria-hidden="true">
+                                Reset Progress
+                            </button>
+                        </div>
                     </div>
-                    <div class="aside-item-img aside-item-img-1">
-                        <img src="../public/icons/book.png" alt="" aria-hidden="true">
-                    </div>
-                </div>
-
-                <div class="aside-item">
-                    <div>
-                        <p>Mastered</p>
-                        <p class="stat-number">11</p>
-                    </div>
-                    <div class="aside-item-img aside-item-img-2">
-                        <img src="../public/icons/brain.png" alt="" aria-hidden="true">
+    
+                    <!-- Controles inferiores -->
+                    <div class="container-bottom flex justify-between items-center p-4">
+                        <button class="border border-neutral-900 rounded-3xl px-4 py-1">
+                            <img src="../public/icons/arrow-left.svg" alt="" aria-hidden="true">
+                            Previous
+                        </button class="text-gray-700">
+                        <p>Card 1 of 40</p>
+                        <button class="border border-neutral-900 rounded-3xl px-4 py-1">
+                            Next
+                            <img src="../public/icons/arrow-right.svg" alt="" aria-hidden="true">
+                        </button>
                     </div>
                 </div>
-
-                <div class="aside-item">
-                    <div>
-                        <p>In Progress</p>
-                        <p class="stat-number">21</p>
+            </main>
+    
+            <!-- Sección secundaria (Estadísticas) -->
+            <aside>
+                <div class="aside-content border border-neutral-900 rounded-2xl p-4 flex flex-col gap-4">
+                    <h3 class="font-black text-2xl">Study Statistics</h3>
+    
+                    <div class="aside-item border border-neutral-900 rounded-2xl flex">
+                        <div class="p-2 w-[90%]">
+                            <p>Total Cards</p>
+                            <p class="stat-number font-bold text-3xl">40</p>
+                        </div>
+                        <div class="aside-item-img aside-item-img-1 border-l border-neutral-900">
+                            <img src="../public/icons/book.png" alt="" aria-hidden="true">
+                        </div>
                     </div>
-                    <div class="aside-item-img aside-item-img-3">
-                        <img src="../public/icons/open-book.png" alt="" aria-hidden="true">
+    
+                    <div class="aside-item border border-neutral-900 rounded-2xl flex">
+                        <div class="p-2 w-[90%]">
+                            <p>Mastered</p>
+                            <p class="stat-number font-bold text-3xl">11</p>
+                        </div>
+                        <div class="aside-item-img aside-item-img-2 border-l border-neutral-900">
+                            <img src="../public/icons/brain.png" alt="" aria-hidden="true">
+                        </div>
+                    </div>
+    
+                    <div class="aside-item border border-neutral-900 rounded-2xl flex">
+                        <div class="p-2 w-[90%]">
+                            <p>In Progress</p>
+                            <p class="stat-number font-bold text-3xl">21</p>
+                        </div>
+                        <div class="aside-item-img aside-item-img-3 border-l border-neutral-900">
+                            <img src="../public/icons/open-book.png" alt="" aria-hidden="true">
+                        </div>
+                    </div>
+    
+                    <div class="aside-item border border-neutral-900 rounded-2xl flex">
+                        <div class="p-2 w-[90%]">
+                            <p>Not Started</p>
+                            <p class="stat-number font-bold text-3xl">8</p>
+                        </div>
+                        <div class="aside-item-img aside-item-img-4 border-l border-neutral-900">
+                            <img src="../public/icons/inbox.png" alt="" aria-hidden="true">
+                        </div>
                     </div>
                 </div>
+            </aside>
+        </div>
 
-                <div class="aside-item">
-                    <div>
-                        <p>Not Started</p>
-                        <p class="stat-number">8</p>
-                    </div>
-                    <div class="aside-item-img aside-item-img-4">
-                        <img src="../public/icons/inbox.png" alt="" aria-hidden="true">
-                    </div>
-                </div>
-            </div>
-        </aside>
     </div>
 </body>
 </html>
